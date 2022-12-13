@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integral University</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            background-color: rgb(230, 217, 240);
+        }
+
+        /*Header*/
+
+        .top {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background-color: rgb(79, 55, 96);
+            margin: 2% 0px;
+        }
+
+        .iulLogo img {
+            height: auto;
+            width: 200px;
+        }
+
+        header ul {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            list-style-type: none;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 23px;
+
+        }
+
+        header ul li {
+            margin: 0px 50px;
+            padding: 15px 10px;
+        }
+
+        header ul li:hover {
+            background-color: rgb(79, 55, 96);
+        }
+
+        header ul li a:hover {
+            color: rgb(127, 164, 243);
+        }
+
+        /*Header ends*/
+
+        .iuImg img {
+            width: 100%;
+            height: 500px;
+        }
+
+        /*iu_info start*/
+        .iuInfo p {
+            text-align: center;
+            margin: 5% 0px;
+        }
+
+        /*iu_info ends*/
+
+        /*vision and mission*/
+        .vm {
+            margin: 5% 5%;
+        }
+
+        .vm h2 {
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .vm .vision {
+            background-color: rgb(182, 168, 192);
+            text-align: center;
+            padding: 10px 10px;
+            margin-bottom: 3%;
+        }
+
+        .vm .mission {
+            background-color: rgb(182, 168, 192);
+            text-align: center;
+            padding: 10px 10px;
+        }
+
+        .vm .mission ul {
+            list-style: none;
+        }
+
+        /*vision and mission ends*/
+
+        /*wifi and LAN*/
+
+        .wifiLan {
+            margin: 5% 0px;
+        }
+
+        .wifi {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            margin-bottom: 5%;
+        }
+
+        .wifiLan .wifi .aboutWifi {
+            width: 450px;
+            height: 230px;
+            padding: 30px 30px;
+            background-color: rgb(182, 168, 192);
+        }
+
+        .wifiLan .wifi .wifiImg img {
+            width: 400px;
+            height: 280px;
+        }
+
+
+        .wifiLan .lan {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: row-reverse;
+        }
+
+        .wifiLan .lan .aboutLan {
+            width: 450px;
+            height: 230px;
+            padding: 30px 30px;
+            background-color: rgb(182, 168, 192);
+        }
+
+        .wifiLan .lan .lanImg img {
+            width: 400px;
+            height: 280px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        /*wifi and LAN ends*/
+
+        /* Time table button start */
+        .button {
+            border-radius: 10px;
+            background-color: rgb(243, 237, 237);
+            border: none;
+            color: #323f42fe;
+            text-align: center;
+            font-size: 15px;
+            padding: 10px;
+            width: 30%;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: auto;
+            display: block;
+            box-shadow: 1px 1px 15px 1px;
+            outline: none;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 35px;
+        }
+
+        .button:hover span:after {
+            opacity: 50;
+            right: 0;
+        }
+
+        .bcaTable {
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin-bottom: 10px;
+        }
+
+
+        /* Time table button end */
+
+        /*footer start*/
+        footer {
+            text-align: center;
+            background-color: rgb(182, 168, 192);
+            padding: 20px 0px;
+            margin-top: 5%;
+        }
+
+        footer .instaFb img {
+            display: inline-block;
+            height: 25px;
+            width: 25px;
+            padding: 20px 5px;
+        }
+
+        /*footer ends*/
+
+        .iulVideo{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .iulVideo video{
+            height: 30%;
+            width: 60%;
+        }
+
+        @media(max-width:800px) {
+
+            .top,
+            .iulLogo {
+                margin-top: 10px;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media(max-width:800px) {
+
+            .top,
+            .firstImage,
+            header,
+            ul {
+                margin-top: 10px;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media(max-width:800px) {
+
+            .top,
+            header,
+            ul,
+            li {
+                margin: 10px 0px;
+            }
+        }
+
+        @media(max-width:800px) {
+
+            .wifiLan,
+            .wifi,
+            .aboutWifi {
+                margin-bottom: 15px;
+            }
+        }
+
+        @media(max-width:800px) {
+
+            .wifiLan,
+            .lan,
+            .aboutLan {
+                margin-bottom: 15px;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!--Header-->
+    <div class="top">
+        <div class="iulLogo">
+            <a href="https://iul.ac.in/"><img src="picvdo/iulLogo.jpg" alt="iul"></a>
+        </div>
+        <header>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contactUs.html">CONTACT US</a></li>
+                <li><a href="https://www.iul.ac.in/">IUL</a></li>
+            </ul>
+        </header>
+    </div>
+    <!--Header ends-->
+
+    <div class="iuImg">
+        <img src="picvdo/iul.jpeg" alt="iu">
+    </div>
+
+    <!--iu_Info start-->
+    <div class="iuInfo">
+        <p>The establishment of the Integral University as a center for learning was a small step in the direction of
+            achievement of the vision to educate and empower people.<br>
+
+            In tune with the motto “Inspiring Existence”, the people at Integral University strive to attain a level of
+            perfection and excellence that is at par with the best.<br>
+
+            The University offers an array of subjects that cater to the capabilities of different individuals at
+            various
+            levels of education.<br></p>
+    </div>
+    <!--iu_Info end-->
+    <div class="iulVideo">
+        <video autoplay
+            muted controls src="picvdo/iul.mp4">sample</video>
+    </div>
+
+    <!--Vission and mission-->
+    <div class="vm">
+        <div class="vision">
+            <h2>VISION</h2>
+            <p>
+                Department of Computer Science & Engineering to be a leading world class technology department
+                playing its
+                role as a key node in national and global knowledge network, thus empowering the computer science
+                industry
+                with the wings of knowledge and power of innovation. Lorem ipsum dolor sit, amet consectetur
+                adipisicing elit. Eius nulla ex quos tempora quia voluptatibus hic? Repellendus reprehenderit quis
+                obcaecati. To lead the teeming millions of the world through the wilderness of ignorance and
+                illiteracy, as "Kindly Light" (Exodus 13:21) with the resounding divine proclamation. "Read: Thy
+                Lord is the most bounteous (Quran 30:96:3)." and to educate them in the most constructive and
+                innovative ways. To integrate the ebullience, intellect and dynamism of youth with decency, decorum,
+                discipline and dedication through value-based quality education.
+            </p>
+        </div>
+        <div class="mission">
+            <h2>MISSION</h2>
+            <p>
+                <b>The Mission of the department is as follows:</b>
+
+            <ul>
+                <li>
+                    To nurture talent of students for research, innovation and excellence in the field of computer
+                    engineering starting from Under graduate level.
+                </li>
+                <li>
+                    To develop highly analytical and qualified computer engineers by imparting training on cutting edge
+                    technology.
+                </li>
+                <li>
+                    To produce socially sensitive computer engineers with professional ethics.
+                </li>
+                <li>
+                    To focus on R&D environment in close partnership with industry and foreign universities.
+                </li>
+                <li>
+                    To produce well-rounded, up to date, scientifically tempered, design oriented engineer and
+                    scientists capable of lifelong learning.
+                </li>
+            </ul>
+            </p>
+        </div>
+    </div>
+    <!--vision and mission ends-->
+
+    <!--wifi and LAN-->
+    <div class="wifiLan">
+        <div class="wifi">
+            <div class="aboutWifi">
+                <h2><a href="https://en.wikipedia.org/wiki/Wi-Fi">Wi-Fi</a></h2>
+                <p>Wi-Fi is a wireless networking technology that allows devices such as computers (laptops and
+                    desktops),
+                    mobile devices (smart phones and wearables), and other equipment (printers and video cameras) to
+                    interface with the Internet. It allows these devices--and many more--to exchange information with
+                    one another, creating a network.<br>
+                    Internet connectivity occurs through a wireless router. When you access Wi-Fi, you are connecting to
+                    a wireless router that allows your Wi-Fi-compatible devices to interface with the Internet.</p>
+            </div>
+            <div class="wifiImg">
+                <img src="picvdo/wifi.webp" alt="wifi">
+            </div>
+        </div>
+        <div class="lan">
+            <div class="aboutLan">
+                <h2><a href="https://en.wikipedia.org/wiki/Local_area_network">LAN</a></h2>
+                <p>A local area network (LAN) is a collection of devices connected together in one physical location,
+                    such as a building, office, or home. A LAN can be small or large, ranging from a home network with
+                    one user to an enterprise network with thousands of users and devices in an office or school.<br>
+                    Regardless of size, a LAN's single defining characteristic is that it connects devices that are in a
+                    single, limited area. In contrast, a wide area network (WAN) or metropolitan area network (MAN)
+                    covers larger geographic areas. Some WANs and MANs connect many LANs together.</p>
+            </div>
+            <div class="lanImg">
+                <img src="picvdo/lan.webp" alt="lan">
+            </div>
+        </div>
+    </div>
+    <!--wifi and LAN ends-->
+
+    <!-- Time Table Button -->
+    <div class="bcaTable">
+        <p>Department of Computer Application</p>
+        <p>Time Table</p>
+    </div>
+    <button class="button" onclick="window.location.href='timeTable.html';"><span>Click Here for Time
+            Table</span></button>
+
+    <!-- Time Table Button -->
+
+
+    <footer>
+        <div class="instaFb">
+            <a href="https://instagram.com/integralunilko_official?igshid=YmMyMTA2M2Y="><img src="picvdo/insta.png"
+                    alt="Instagram"></a>
+            <a href="https://www.facebook.com/100064842272551/"><img src="picvdo/fb.png" alt="Faceb(.)(.)k"></a>
+        </div>
+        <div class="copyright">
+            <p> &copy; 2022 Integral University. All Rights Reserved</p>
+            <p>Designed & Developed By: Abhishek Kumar</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
